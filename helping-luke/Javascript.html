@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : EarthyBlue 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140215
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">Calgary Flames</a></h1>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" accesskey="1" title="">Homepage</a></li>
+					<li><a href="Page2.html" accesskey="2" title="">Media</a></li>
+					<li class="active"><a href="#" accesskey="3" title="">Java</a></li>
+					<li><a href="contact&reference.html" accesskey="4" title="">Contacts and Reference</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page-wrapper">
+	<div id="welcome" class="container">
+		<div class="title">
+			<h2>C of RED</h2>
+		</div>
+		<p class="media-text">JavaScriptpage which prompts user to enter a name, a paragraph on how the JavaScript works and a widget that delcares how the much the user must spend in order to attend a flames hockey game at the Saddledome .</p>
+		<input id="input" type="text"></input>
+		<div class="media-text" id="output"></div>
+		<script type="text/javascript">
+			var d = new Date();
+			var time = d.getHours();
+			console.log("gets here. ");
+			console.log(time);
+			if (time < 10) 
+			{
+			  document.getElementById("output").innerHTML = "Good morning, ";
+			}
+			if ((time >= 10) && (time < 17))
+			{
+			  document.getElementById("output").innerHTML = "Good afternoon, ";
+			}
+			if (time >= 17) 
+			{
+			  document.getElementById("output").innerHTML = "Good evening, ";
+			}
+			var greeting = document.getElementById("output").innerHTML
+			document.getElementById("input").addEventListener('input', function helloWorld() {
+			  document.getElementById("output").innerHTML = greeting + document.getElementById("input").value;
+			});	  
+		</script>
+	</div>
+</div>
